@@ -5,7 +5,7 @@ async function post(req, res, next) {
 **Status:** ${req.body.build.state}\n
 **URL:** ${req.body.build.web_url}`
 
-    const res = await axios.post('https://chat.involves.com/hooks/rzzpyfqsoinjixmtb3wn6og49a', {
+    await axios.post('https://chat.involves.com/hooks/rzzpyfqsoinjixmtb3wn6og49a', {
         text: response
     })
 
