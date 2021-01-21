@@ -1,12 +1,13 @@
 'use strict'
 
-const bodyParser = require('body-parser')
 const compression = require('compression')
 const express = require('express')
 const controller = require('./controller')
 
 const app = express()
-app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use(express.urlencoded());
+app.use(express.json());
 app.use(compression())
 
 app.post('/file-uploader', controller.FileUploader.post)
