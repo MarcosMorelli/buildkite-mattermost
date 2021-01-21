@@ -2,7 +2,7 @@ const axios = require('axios')
 
 async function post(req, res, next) {
     const info = req.body.build
-    let responseText = 'O pipeline do projeto File Uploader terminou!\n'
+    let responseText = '**File Uploader** pipeline finished!\n'
     if (info.branch)  {
         responseText += `**Branch:** ${info.branch}\n`
     }
@@ -10,7 +10,7 @@ async function post(req, res, next) {
         responseText += `**Author:** ${info.author.name}\n`
     }
     if (info.state)  {
-        responseText += `**Status:** ${info.state}\n`
+        responseText += `**Status:** ![embedded image](https://badge.buildkite.com/02f1fda155a3e5c31b999aaa982370523f9ed53737de174453.svg)\n`
     }
     if (info.web_url)  {
         responseText += `**URL:** ${info.web_url}`
