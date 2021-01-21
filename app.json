@@ -1,0 +1,8 @@
+{
+    "name": "Buildkite -> Mattermost",
+    "description": "Service to receive buildkite webhooks, parse and post to mattermost",
+    "repository": "https://github.com/MarcosMorelli/buildkite-mattermost",
+    "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
+    "keywords": ["node", "express", "buildkite", "mattermost"],
+    "image": "heroku/nodejs"
+  }
