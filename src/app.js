@@ -2,11 +2,12 @@
 
 const compression = require('compression')
 const express = require('express')
-const routesV1 = require('./routes/v1')
+const controller = require('./controller')
 
 const app = express()
 app.use(compression())
-app.use('/v1', routesV1)
+
+app.post('/file-uploader', controller.FileUploader.post)
 
 app.disable('etag')
 app.disable('x-powered-by')
